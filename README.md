@@ -6,6 +6,9 @@ It's retreiving JSON data from the Open Trivia Database API with Ajax requests. 
 
 This timed quiz application saves the user's high scores in the local storage.
 
+![1628976438698](https://user-images.githubusercontent.com/84223350/129460504-179e4660-a8ed-4fa3-a385-610cd682922f.jpg)
+
+
 ## Project setup
 ```
 npm install
