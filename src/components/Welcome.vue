@@ -2,7 +2,7 @@
   <div class="wrapper">
     <transition name="fade-in-out" appear>
       <div class="welcome-title info-box" style="--delay: .3s">
-        <h1>Welcome{{isNewUser ? "!" : " back,"}}</h1>
+        <h1>Welcome{{$store.state.userName === null ? "!" : " back,"}}</h1>
         <h1 v-if="!isNewUser" class="cd-danger"><i>{{$store.state.userName}}</i></h1>
         <h2>Test your knowledge with this quiz</h2>
       </div>
@@ -51,7 +51,6 @@ export default {
   created(){
     this.$store.commit('SET_USERNAME', window.localStorage.getItem("userName"))
     if(this.$store.state.userName) this.isNewUser = false
-    
   },
   methods: {
     setUser(e){

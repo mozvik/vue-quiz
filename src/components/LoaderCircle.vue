@@ -9,7 +9,6 @@
 
 export default {
   name: "LoaderCircle",
-  // emits: ["windowClosed"],
   props: {
      show: { type: Boolean, default: true },
      hide: { type: Boolean, default: false}
