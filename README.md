@@ -1,4 +1,5 @@
 # vue-quiz
+Simple Quiz Application made with Vue.js & Vuex
 
 ## Project setup
 ```
