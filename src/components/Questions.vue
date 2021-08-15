@@ -1,5 +1,4 @@
 <template>
-
   <div class="wrapper">
     <div class="questions-infobar info-box">
       <h2>{{currentQuestion + 1}}/{{$store.getters.questionsCount}}</h2>
@@ -11,7 +10,6 @@
    
     <div  class="questions-question info-box" >
       <h2 v-html="$store.getters.getQuestion(currentQuestion)"></h2>
-
     </div>
 
      <div  class="questions-options info-box" >
@@ -24,9 +22,7 @@
           v-bind:class="[showEvaluation && item === $store.getters.getCorrectAnswer(currentQuestion) ? 'correct-bg':'', 
           showEvaluation && item != $store.getters.getCorrectAnswer(currentQuestion) && selectedAnswer === item ? 'wrong-bg':'' ,
           showEvaluation && item != $store.getters.getCorrectAnswer(currentQuestion) && selectedAnswer != item ? 'fade-out':''         
-          
           ]"         
-         
           >
       </button>
     </div>
@@ -58,7 +54,6 @@ export default {
       this.resetStartingTime()
       this.ticToc()
       this.shuffleAnswers()
-
   },
   watch: {
     timeRemaining: function() {
@@ -111,7 +106,6 @@ export default {
       setTimeout(() => {
         this.showNextQuestion()
       }, 2000)    
-      
     },
     showNextQuestion() {
       this.currentQuestion++

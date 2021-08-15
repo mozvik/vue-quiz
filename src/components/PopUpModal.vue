@@ -8,7 +8,6 @@
                 <div v-if="!isSuccessful" class="popup-buttons">
                     <button class="ok-btn" @click="okClicked">{{ okBtn }}</button>
                     <button class="cancel-btn" @click="cancelClicked">{{ cancelBtn }}</button>
-                    
                 </div>
             </div>
         </div>

@@ -1,32 +1,33 @@
 <template>
   <div class="wrapper">
     <transition name="fade-in-out" appear>
-    <div class="results-title info-box" style="--delay: .3s">
-      <h1>{{$store.getters.selectedCategoryName}}</h1>
-      <h2>{{$store.getters.selectedDifficulty}} difficulty</h2>
-    </div>
+      <div class="results-title info-box" style="--delay: .3s">
+        <h1>{{$store.getters.selectedCategoryName}}</h1>
+        <h2>{{$store.getters.selectedDifficulty}} difficulty</h2>
+      </div>
     </transition>
+
     <transition name="fade-in-out" appear>
-    <div class="results-score info-box" style="--delay: .5s">
-      <transition name="tada">
-        <h2 v-if="isBestScore && $store.state.userName" class="wrong">New personal record!</h2>
-      </transition>
-      <hr v-if="isBestScore && $store.state.userName">
-      <h3>Correct answers: {{$store.state.correctAnswers}}/{{$store.getters.questionsCount}}</h3>
-      <hr>
-      <h3>Score: {{$store.state.currentScore}}</h3> 
-      <h3>Time: {{getTime()}}</h3>
-      <hr v-if="localStorageData">
-      <h4 v-if="localStorageData">Your old score: {{localStorageData.score}}</h4>
-      <h4 v-if="localStorageData">Your old time: {{getTime(localStorageData.time)}}</h4>
-    </div>
-   </transition>
+      <div class="results-score info-box" style="--delay: .5s">
+        <transition name="tada">
+          <h2 v-if="isBestScore && $store.state.userName" class="wrong">New personal record!</h2>
+        </transition>
+        <hr v-if="isBestScore && $store.state.userName">
+        <h3>Correct answers: {{$store.state.correctAnswers}}/{{$store.getters.questionsCount}}</h3>
+        <hr>
+        <h3>Score: {{$store.state.currentScore}}</h3> 
+        <h3>Time: {{getTime()}}</h3>
+        <hr v-if="localStorageData">
+        <h4 v-if="localStorageData">Your old score: {{localStorageData.score}}</h4>
+        <h4 v-if="localStorageData">Your old time: {{getTime(localStorageData.time)}}</h4>
+      </div>
+    </transition>
+
     <transition name="fade-in-out" appear>
-    <div class="results-options info-box" style="--delay: .7s">
-      <button @click="replay">Replay quiz</button>
-      <button @click="another">Another quiz</button>
-      
-    </div>
+      <div class="results-options info-box" style="--delay: .7s">
+        <button @click="replay">Replay quiz</button>
+        <button @click="another">Another quiz</button>
+      </div>
     </transition>
   </div>
 </template>
@@ -68,8 +69,6 @@ export default {
     getLocalStorage(){
       return JSON.parse(window.localStorage.getItem(this.$store.getters.selectedCategoryName + ':' + this.$store.getters.selectedDifficulty))
     },
-    
-    
   },
   methods: {
     replay(){
@@ -98,7 +97,6 @@ export default {
       let seconds =  Math.floor((millis - minutes * 60000)/1000).toFixed(0)
       let tenth = ((millis - minutes * 60000 - seconds * 1000) /10).toFixed(0)
        return `${(minutes < 10 ? "0" : "")}${minutes}`+ ":" + `${(seconds < 10 ? "0" : "")}${seconds}`+ ":" + `${tenth}${(tenth < 10 ? "0" : "")}`
-      
     }
   }
 };

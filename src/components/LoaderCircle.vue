@@ -58,12 +58,11 @@ export default {
           var(--c)    100% calc(360deg/var(--n)));
     -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - var(--b)),#fff calc(100% - var(--b) + 1px));
             mask:radial-gradient(farthest-side,transparent calc(100% - var(--b)),#fff calc(100% - var(--b) + 1px));
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: repeat;
-    animation-timing-function: linear;
-    animation-name: loadercircle-anim;
-    
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: repeat;
+            animation-timing-function: linear;
+            animation-name: loadercircle-anim;
   }
   .loaderCircle:before {
     content:"";

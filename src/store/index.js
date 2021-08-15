@@ -43,7 +43,8 @@ export default createStore({
     },
     UPDATE_SELECTED_CATEGORY(state, data) {
       state.selectedCategory = data
-    },UPDATE_SELECTED_DIFFICULTY(state, data) {
+    },
+    UPDATE_SELECTED_DIFFICULTY(state, data) {
       state.selectedDifficulty = data
     },
     SET_CURRENT_COMPONENT(state, data) {

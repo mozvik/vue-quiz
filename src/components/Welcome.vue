@@ -7,6 +7,7 @@
         <h2>Test your knowledge with this quiz</h2>
       </div>
     </transition>
+
     <transition name="fade-in-out">
     <div class="welcome-form info-box" v-if="$store.getters.categoriesCount > 0" style="--delay: .5s">
       <form action="">
@@ -27,10 +28,7 @@
               <option value="hard">Hard</option>
             </select>
           </label>
-
-          
           <button @click="getQuestions" @submit.prevent >Next</button>
-          
       </form>
     </div>
     </transition>
@@ -46,7 +44,6 @@ export default {
     }
   },
   computed: {
-   
   },
   created(){
     this.$store.commit('SET_USERNAME', window.localStorage.getItem("userName"))
@@ -103,8 +100,6 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     margin: .5rem auto;
-    
-  
   }
   ::placeholder{
     font-size: 18px;

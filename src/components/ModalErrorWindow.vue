@@ -1,5 +1,4 @@
 <template>
-    
     <div class="modal" @click="display = 'none'" v-bind:style="{display: display}">
         <div class="modal-content slide-down">
             <div class="modal-title">
@@ -39,7 +38,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .modal {
   display: block; 

@@ -1,7 +1,5 @@
 <template>
-  <PopUpModal ref="dialog" v-show="showDialog">
-    
-  </PopUpModal>
+  <PopUpModal ref="dialog" v-show="showDialog"></PopUpModal>
   
   <div class="navbar" :style="[showMenu ? 'background: var(--ash);':'background: linear-gradient(var(--ashTransparent), var(--ashTransparent));']">
     <div><img src="favicon.ico" alt=""></div>
@@ -16,9 +14,9 @@
   </transition>
 
   <div class="home">
-  
     <component :is="$store.state.currentComponent"></component>
   </div>
+
   <LoaderCircle v-if="$store.state.loading"></LoaderCircle>
 </template>
 
@@ -280,8 +278,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
-  
+  align-items: center; 
 }
 .evaluation>div{
   margin-top: 70px;

@@ -19,11 +19,9 @@
   font-family: Nunito, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* font-size: 18px; */
 }
 body {
   position: relative;
-  
 }
 body::before{
   content: "";

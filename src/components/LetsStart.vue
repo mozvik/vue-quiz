@@ -4,7 +4,6 @@
       <div class="letsstart-title info-box" style="--delay: .3s">
         <h1>{{$store.getters.selectedCategoryName}}</h1>
         <h2>{{$store.getters.selectedDifficulty}} difficulty</h2>
-      
       </div>
     </transition>
 
@@ -13,10 +12,10 @@
         <p>You have 30 seconds to answer each question. The faster you answer, the higher your score.</p>
         <button @click="$store.commit('SET_CURRENT_COMPONENT','Questions')">Start Quiz</button>
       </div>
-
     </transition>
-     <transition name="fade-in-out" appear>
-       <div v-if="$store.state.userName" class="letsstart-bestscore info-box" style="--delay: .7s">
+
+    <transition name="fade-in-out" appear>
+      <div v-if="$store.state.userName" class="letsstart-bestscore info-box" style="--delay: .7s">
         <h3>Your best scores in the category</h3>
         <table>
           <tr>
@@ -40,8 +39,7 @@
             <td>{{getScores('Hard') !== null ? getTimes('Hard') : '---'}}</td>
           </tr>
         </table>
-        
-           </div>
+      </div>
      </transition>
    
   </div>
@@ -55,13 +53,12 @@ export default {
     }
   },
   computed: {
-   
   },
   methods: {
     getScores(diff) {
       return JSON.parse(window.localStorage.getItem(this.$store.getters.selectedCategoryName + ':' + diff))
     },
-   getTimes(diff) {
+    getTimes(diff) {
       let millis = JSON.parse(window.localStorage.getItem(this.$store.getters.selectedCategoryName + ':' + diff))
       if (!millis) {
         return undefined
@@ -79,6 +76,4 @@ export default {
 </script>
 
 <style scoped>
-
-  
 </style>
