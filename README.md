@@ -5,7 +5,7 @@ Simple Quiz Application made with Vue.js & Vuex state management
 
 ####
 It's retreiving JSON data from the Open Trivia Database API (https://opentdb.com/api_config.php) using Ajax requests
-and saves the user's high scores in the local storage.
+and saves the user's high scores to the local storage.
 
 
 
