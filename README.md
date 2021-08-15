@@ -1,7 +1,7 @@
 # vue-quiz
 Simple Quiz Application made with Vue.js & Vuex state management
 
-## [View Demo](https://vue-quiz.onrender.com/)
+## [View Demo](https://mozvik.github.io/vue-quiz/)
 
 ####
 It's retreiving JSON data from the Open Trivia Database API (https://opentdb.com/api_config.php) using Ajax requests
