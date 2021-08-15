@@ -106,7 +106,7 @@ export default {
     overflow-y: scroll;
   }
   .navbar {
-    color: var(--antique);
+    color: var(--light);
     background: linear-gradient(var(--ashTransparent), var(--ashTransparent));
     user-select: none;
     display: flex;
@@ -118,12 +118,12 @@ export default {
   }
   .navbar i ,.sidebar>div{
     font-size: 2.5rem;
-    color: var(--antique);
+    color: var(--light);
     transition: color 0.2s ease-in;
   }
   .navbar i:hover,.sidebar>div:hover {
     cursor: pointer;
-    color: var(--pumpkin);;
+    color: var(--dark);
     transition: color 0.35s ease-out;
   }
   
@@ -137,7 +137,7 @@ export default {
     height: 100%;
     width: 100%;
     background: var(--ash);
-    color: var(--antique);
+    color: var(--light);
     z-index: 1;
   }
   .slide-from-left-enter-active,
@@ -200,10 +200,10 @@ export default {
     width: 100%;
     padding: .75rem 2rem;
     font-size: 1.5rem;
-    border-bottom: 1px solid var(--pumpkin);
+    border-bottom: 1px solid var(--dark);
   }
   .sidebar>div:first-child{
-    border-top: 1px solid var(--pumpkin);
+    border-top: 1px solid var(--dark);
   }
   button{
     width: 90%;
@@ -238,7 +238,7 @@ export default {
    }
   button:hover{
     cursor: pointer;
-    background: var(--pumpkin);
+    background: var(--lightSecondary);
     transition: background 0.35s ease-out;
   }
   button:disabled{
@@ -288,17 +288,19 @@ export default {
   color: green;
 }
 .correct-bg {
+  color: white;
   background: green;
 }
 .correct-bg:disabled {
-  color: var(--linen);
+  color: white;
   background: green;
 }
 .wrong-bg{
+  color: white;
   background: red;
 }
 .wrong-bg:disabled{
-  color: var(--linen);
+  color: white;
   background: red;
 }
 .hide-element{

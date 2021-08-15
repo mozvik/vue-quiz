@@ -5,12 +5,13 @@
 <style>
 :root{
   --dark: #2c3e50;
-  --antique: #F6EAD6;
+  --light: #FFFEE4;
+  --antique: #F6E6CB;
   --yellow: #BF4D28;
-  --ash: #655643;
-  --ashTransparent:  rgba(101,86,67, .8);
-  --linen: #F9D9A2;
-  --pumpkin: #E6AC27;
+  --ash: #A0937D;
+  --ashTransparent:  rgb(160, 147, 125, .9);
+  --linen: rgb(160, 147, 125, .4);
+  --lightSecondary: rgb(160, 147, 125, .7);
 }
 *{
   box-sizing: border-box;
@@ -28,7 +29,7 @@ body::before{
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-image: url('/img/mobile-bg.jpg');
+  /* background-image: url('/img/mobile-bg.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -43,7 +44,7 @@ body::before{
 }
 @media screen and (min-width: 768px) {
   body::before{
-    background-image: url('/img/desktop-bg.jpg');
+    /* background-image: url('/img/desktop-bg.jpg'); */
   }
 }
 

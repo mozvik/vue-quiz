@@ -114,9 +114,8 @@ export default {
     border-radius: 3rem;
   }
    .welcome-form input:focus, .welcome-form select:focus{
-    border: 2px solid var(--pumpkin);
+    border: 2px solid var(--lightSecondary);
     outline: none;
-    background: var(--linen);
   }
 
 </style>
