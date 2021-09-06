@@ -100,6 +100,7 @@ export default {
     width: 100%;
     color: var(--dark);
     user-select: none;
+    padding-bottom: 10rem;
   }
 
 .home {
@@ -180,7 +181,7 @@ export default {
             }
   }
   .fade-out{
-    animation: fadeout 1.4s ease-in-out 1 forwards; 
+    animation: fadeout 0.4s ease-in-out 1 forwards; 
   }
   @keyframes fadeout{
     100%{
@@ -336,7 +337,7 @@ export default {
     left: 0;
   }
   .wrapper{
-    height: auto;
+    height: 100vh;
     grid-template-rows: 1fr 2fr 2fr;
   }
    .evaluation>div{
