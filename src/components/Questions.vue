@@ -2,9 +2,9 @@
   <div class="wrapper">
     <div class="questions-infobar info-box">
       <h2>{{currentQuestion + 1}}/{{$store.getters.questionsCount}}</h2>
-      <h2 v-if="timeLimit > 1500" class="cd-default">{{countdown}}</h2>
-      <h2 v-if="timeLimit > 500 && timeLimit <= 1500" class="cd-warning">{{countdown}}</h2>
-      <h2 v-if="timeLimit <= 500" class="cd-danger">{{countdown}}</h2>
+      <h2 v-if="timeRemaining > 15000" class="cd-default">{{countdown}}</h2>
+      <h2 v-if="timeRemaining <= 15000 && timeRemaining > 5000" class="cd-warning">{{countdown}}</h2>
+      <h2 v-if="timeRemaining <= 5000" class="cd-danger">{{countdown}}</h2>
       <h2>{{$store.state.currentScore}}pts</h2>
     </div>
    
@@ -125,5 +125,11 @@ export default {
 </script>
 
 <style scoped>
-
+.wrapper{
+    height: 100vh;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+.questions-options{
+  height: 208px;
+}
 </style>
