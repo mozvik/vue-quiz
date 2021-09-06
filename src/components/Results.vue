@@ -103,5 +103,8 @@ export default {
 </script>
 
 <style scoped>
-
+.wrapper{
+    height: 100vh;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 </style>
