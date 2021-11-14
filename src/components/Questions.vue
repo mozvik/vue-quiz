@@ -132,4 +132,8 @@ export default {
 .questions-options{
   height: 208px;
 }
+:focus:not(:focus-visible) {
+  outline: 0;
+  box-shadow: none;
+}
 </style>
