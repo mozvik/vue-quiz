@@ -29,12 +29,12 @@ body::before{
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  /* background-image: url('/img/mobile-bg.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   filter: opacity(.25);
 }
+
 #app {
   position: relative;
   text-align: center;
@@ -42,10 +42,4 @@ body::before{
   width: 100%;
   height: 100vh;
 }
-@media screen and (min-width: 768px) {
-  body::before{
-    /* background-image: url('/img/desktop-bg.jpg'); */
-  }
-}
-
 </style>

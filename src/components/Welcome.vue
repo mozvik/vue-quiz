@@ -43,8 +43,7 @@ export default {
       isNewUser: true
     }
   },
-  computed: {
-  },
+  
   created(){
     this.$store.commit('SET_USERNAME', window.localStorage.getItem("userName"))
     if(this.$store.state.userName) this.isNewUser = false
